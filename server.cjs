@@ -40,7 +40,7 @@ app.get('/getcount-data-rout1',async function(req,res){
 
 app.post('/addcount-rout1', async function (req, res) {
   try {
-    var routno = 1// Math.floor(Math.random() * 10)
+    var routno = Math.floor(Math.random() * 10)
    
 
     var url = "https://smarttransitapi.onrender.com/deleteticket" + routno;
