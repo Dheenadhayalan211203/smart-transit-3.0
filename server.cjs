@@ -11,7 +11,7 @@ app.use(bodyparser.json())
 
 async function connectToDb() {
   try {
-    await mongoose.connect('mongodb+srv://Dheena:dheena123@cluster0.ser6ewc.mongodb.net/Smart_Transit?retryWrites=true&w=majority')
+    await mongoose.connect( process.env.mongouri)
 
     app.listen(port, function () {
       console.log(`server is running on ${port}`)
